@@ -2,5 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('todo/completed', views.TodoCompletedlist.as_view()),
+    path('todos', views.TodoListCreate.as_view()),
+    path('todos/<int:pk>', views.TodoRetrieveUpdateDestroy.as_view()),
+    path('todos/completed', views.TodoCompletedlist.as_view()),
 ]
